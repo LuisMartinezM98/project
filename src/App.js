@@ -1,9 +1,14 @@
 
 import './App.css';
+import Header from './modules/header';
+import Main from './modules/Main';
+
 
 function App() {
   return (
-   console.log("Hola de nuevo ")
+    <Header/>
+    <Main/>
+   //console.log("Hola de nuevo ")
   );
 }
 
