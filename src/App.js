@@ -1,15 +1,18 @@
 
 import './App.css';
-import Header from './modules/header';
-import Main from './modules/Main';
+import Footer from './components/Footer';
+import Header from './components/header';
+import Main from './components/Main';
 
 
 function App() {
   return (
-    <Header/>
-    <Main/>
-   //console.log("Hola de nuevo ")
+    <Nav>
+    <Header />
+    <Main />
+    <Footer />
+    </Nav>
   );
-}
+};
 
 export default App;
