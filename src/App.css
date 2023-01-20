@@ -1,7 +1,61 @@
-.nav{
-  align-items: center;
+.App Nav{
+  display: flex;
+  flex: auto;
+  margin: 5rem;
+  justify-content: space-between;
+  text-decoration: none;
 }
 
-.footerItem1{
-  display: flex;
+.nav-item{
+  text-decoration: none;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  color: black;
+  margin-top: 1rem;
 }
+
+.nav-logo{
+  width: 120%;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: #d9d9d9;
+}
+
+.footerItem{
+  margin-right: 1rem;
+}
+.footerItem h2{
+  font-size: 100%;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  color: #495E57;
+}
+
+.footerLogo{
+  margin-top: 1.5rem;
+  margin-left: 5rem;
+}
+
+.footerItem li {
+  margin-right: 5rem;
+  list-style: none;
+}
+
+.footerItem a{
+  text-decoration: none;
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  color: black;
+}
+.bars{
+  color: black;
+}
+
+@media screen and (max-width: 1080px){
+  
+}
+
+

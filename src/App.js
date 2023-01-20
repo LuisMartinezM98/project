@@ -4,19 +4,18 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 
 
 function App() {
   return (
     <div className='App'>
-      <Router>
+      <Router >
         <Header/>
         <Nav/>
         <Main/>
         <Footer/>
-
       </Router>
     </div>
 
