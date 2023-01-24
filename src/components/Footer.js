@@ -1,37 +1,70 @@
 import Logo from '../icons_assets/Logo.svg'
-import {Link} from 'react-router-dom';
+import { NavItems } from './Navbar';
 
+export const ConcatItems=[
+    {
+        Title: "Address",
+        url: "#",
+    },
+    {
+        Title: "Phone number",
+        url: "#",
+    },
+    {
+        Title: "Email",
+        url: "#",
+    },
+]
 
 function Footer() {
     return(
-        <footer className='footer'>
-            <div className='footerLogo'>
-            <Link to='/'>
-                <img src={Logo} alt="logo"/>
-            </Link>
-            </div>
-            <div className='footerItem'>
+        <footer >
+            <div className='footer'>
+                <div className='footerLogo'>
+                        <img src={Logo} alt="logo"/>
+                </div>
+                <div className="footerItem">
+                    <ul>
+                        <h2 className="FooterTitle">Doormat Navigation</h2>
+                        {NavItems.map((item, index) =>{
+                        return(
+                            <li key={index}>
+                                <a className="footerItem" href={item.url}>
+                                    {item.Title}
+                                </a>
+                            </li>
+                        );
+                    })}
+                    </ul>
+                </div>
+                <div className="footerItem2">
+                    <ul>
+                    <h2 className="footerTitle">Contact</h2>
+                    {ConcatItems.map((item, index) => {
+                        return (
+                            <li key={index}>
+                                <a className="contactItem" href={item.url}>
+                                    {item.Title}
+                                </a>
+                            </li>
+                        );
+                    })}
+                    </ul>
+                </div>
+                <div className="footerItem3">
                 <ul>
-                    <h2>Doormat Navigation</h2>
-                    <li><a href='/'>Home</a></li>
-                    <li><a href='/'>About</a></li>
-                    <li><a href='/'>Menu</a></li>
-                    <li><a href='/'>Reservation</a></li>
-                    <li><a href='/'>Order Online</a></li>
-                    <li><a href='/'>Login</a></li>
-                </ul>
-            </div>
-            <div className='footerItem'>
-                <h2>Contact</h2>
-                <li><a href='/'>Address</a></li>
-                <li><a href='/'>Phone number</a></li>
-                <li><a href='/'>Email</a></li>
-            </div>
-            <div className='footerItem'>
-                <h2>Social Media Links</h2>
-                <li><a href='/'>Address</a></li>
-                <li><a href='/'>Phone number</a></li>
-                <li><a href='/'>Email</a></li>
+                    <h2 className="FooterTitle">Social Media Links</h2>
+                    {ConcatItems.map((item, index) => {
+                        return (
+                            <li key={index}>
+                                <a className="socialMedia" href={item.url}>
+                                    {item.Title}
+                                </a>
+                            </li>
+                        );
+                    })}
+                    </ul>
+                </div>
             </div>
         </footer>
     );

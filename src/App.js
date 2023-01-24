@@ -1,10 +1,9 @@
-
 import './App.css';
 import Header from './components/Header';
 import Main from './components/Main';
-import Nav from './components/Nav';
 import Footer from './components/Footer';
 import { BrowserRouter as Router} from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 
 
@@ -13,7 +12,7 @@ function App() {
     <div className='App'>
       <Router >
         <Header/>
-        <Nav/>
+        <Navbar/>
         <Main/>
         <Footer/>
       </Router>

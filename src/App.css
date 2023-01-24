@@ -1,33 +1,88 @@
-.App Nav{
-  display: flex;
-  flex: auto;
-  margin: 5rem;
-  justify-content: space-between;
-  text-decoration: none;
+:root{
+  --main-color-first: #495E57;
+  --main-color-second: #F4CE14;
+  --secondary-color-first: #EE9972;
+  --secondary-color-second: #FBDABB;
+  --secondary-color-third: #EDEFEE;
 }
-
-.nav-item{
-  text-decoration: none;
+.navbar{
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_items a{
+  position: relative;
   font-family: 'Karla', sans-serif;
   font-weight: 800;
   color: black;
-  margin-top: 1rem;
+  margin: 15px;
+  text-decoration: none;
+}
+.nav_logo{
+  margin: 15px;
+}
+.nav_items ul{
+  list-style: none;
+}
+.nav_items li{
+  display: inline;
+  padding: 2rem;
+}
+a:hover{
+  color: rgb(229, 229, 120);
+}
+.nav_toggle{
+  display: none;
 }
 
-.nav-logo{
-  width: 120%;
+.introduction{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  background-color: var(--main-color-first);
+  justify-content: center;
 }
+.introduction h1{
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  font-size: 64px;
+  color: var(--main-color-second);
+}
+.introduction img{
+  width: 10rem;
+  margin: 2rem
+}
+.introduction h2{
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--secondary-color-third);
+}
+.introduction p{
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--secondary-color-third);
+}
+.introduction button{
+  background-color: black;
+  color: var(--secondary-color-third);
+  font-family: 'Markazi Text', serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
 
 .footer{
   display: flex;
   justify-content: space-between;
   background-color: #d9d9d9;
-}
-
-.footerItem{
   margin-right: 1rem;
 }
-.footerItem h2{
+
+.footer h2{
   font-size: 100%;
   font-family: 'Karla', sans-serif;
   font-weight: 800;
@@ -39,23 +94,97 @@
   margin-left: 5rem;
 }
 
-.footerItem li {
+.footer li {
   margin-right: 5rem;
   list-style: none;
 }
 
-.footerItem a{
+.footer a{
   text-decoration: none;
   font-family: 'Karla', sans-serif;
   font-weight: 500;
   color: black;
 }
+.footer a:hover{
+  color: var(--main-color-second);
+}
+
 .bars{
   color: black;
 }
 
-@media screen and (max-width: 1080px){
-  
+@media (max-width: 1080px){
+ .nav_items{
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #495E57;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  width: -moz-available;
+  height: -webkit-fill-available;
+  height: stretch;
+  transform: translateX(-100%);
+  transition: 0.3s ease all;
+ }
+ .nav_items a{
+  color: var(--secondary-color-third);
+ }
+ .nav_items a:hover{
+  color: var(--main-color-second);
+ }
+
+ .nav_items.open{
+  transform: translateX(0) !important;
+ }
+ .nav_toggle{
+  display: flex !important;
+  flex-direction: column;
+  margin: 15px;
+ }
+ .nav_toggle span{
+  width: 30px;
+  height: 4px;
+  background-color: black;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  transform-origin: 5px 0px;
+  transition: all 0.2s linear;
+ }
+ .nav_toggle.open > span{
+  transform: rotate(45deg) translate(0px, 0px);
+ }
+ .nav_toggle.open > span:nth-child(2){
+  display: none;
+ }
+ .nav_toggle.open > span:nth-child(3){
+  transform: rotate(-45deg) translate(-5px, 1px);
+ }
+ .nav_items li{
+  display: flex;
+}
+
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.footer h2{
+  font-size: 70%;
+}
+.footer a{
+  font-size: 70%;
+  white-space: nowrap;
+}
+
+.footer li{
+  white-space: nowrap;
+}
+
+
+
 }
 
 
