@@ -5,6 +5,9 @@
   --secondary-color-second: #FBDABB;
   --secondary-color-third: #EDEFEE;
 }
+.App{
+  overflow-x: hidden;
+}
 .navbar{
   height: 60px;
   display: flex;
@@ -36,61 +39,389 @@ a:hover{
   display: none;
 }
 
-.introduction{
-  display: grid;
-  grid-template-columns: 33% 33%;
-  grid-template-rows: 15% 15% 25% 25%;
+article.firstSection{
+  display: flex;
+  background-color: var(--main-color-first);
+  align-items: center;
+  justify-content: space-around;
+}
+.firstDescription{
+  width: 20rem;
+}
+.firstDescription > h1{
+  font-family: 'Markazi Text', serif;
+  font-weight:500;
+  font-size: 64px;
+  color: var(--main-color-second);
+  margin-top: -3rem;
+}
+.firstDescription > h2{
+  color: var(--secondary-color-third);
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: -4rem;
+}
+.firstDescription > p{
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--secondary-color-third);
+  margin-top: -2rem;
+}
+.imageFirst > img{
+  width: 20rem;
+  height: 18rem;
+  margin: 1.5rem;
+}
+
+.firstDescription > button{
+  background-color: black;
+  color: var(--secondary-color-third);
+  font-family: 'Markazi Text', serif;
+  height: 3rem;
+  width: 8rem;
+  font-weight: 700;
+}
+
+.pre-Article{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.pre-Article > h1{
+  justify-content: flex-start;
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  font-size: 50px;
+}
+
+.pre-Article > button{
+  background-color: var(--main-color-second);
+  color: black;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  height: 3rem;
+  width: 10rem;
+  border: none;
+}
+.secondSection{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-right: 2rem;
+}
+.Special{
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  height: 28rem;
+  margin: 0 1rem 1rem 5rem;
+  background-color: #EDEFEE;
+  border-radius: 10% 10% 0 0;
+}
+
+.Title_Price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem 0 1rem;
+}
+.Title_Price > h2{
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+.Title_Price > h3{
+  color: var(--main-color-second);
+}
+
+.Special > p{
+  font-family: 'Karla', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  justify-content: center;
+  margin: 0 1rem 3rem 1rem;
+}
+.delivery > a{
+  text-decoration: none;
+  color: black;
+  margin: 0 1rem 0rem 1rem;
+}
+p#third{
+margin-bottom: 2.1rem;
+}
+
+.Special > img{
+  border-radius: 10% 10% 0 0;
+  border: .1rem solid;
+  border-color: black;
+}
+.material-symbols-outlined{
+  display: inline-flex;
+  vertical-align: top;
+  margin-left: 1rem;
+}
+.Lemon > img{
+  object-fit: cover;
+  height: 12rem;
+}
+.Lemon .delivery{
+  margin-top: 1.5rem;
+}
+.bruchetta .delivery{
+  margin-top: 1.5rem;
+}
+.thirdSection{
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #EDEFEE;
+  flex: 1;
+  justify-content: center;
+}
+
+.thirdSection img{
+  width: 10rem;
+  margin-left: 1rem;
+}
+.thirdSection h1{
+  margin-left: 1rem;
+}
+.thirdSection ul > h1{
+  margin-top: 5rem;
+  margin-left: 35rem;
+}
+
+.ArticleTest{
+  width: 30%;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  margin: 1rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  background-color: #FFFF;
+}
+.ArticleTest  p{
+  width: 80%;
+  margin-left: 1rem;
+}
+#SpanTest{
+  display: flex;
+}
+#SpanTest > h2{
+  margin-left: 2rem;
+}
+
+.thirdSection li{
+  list-style: none;
+}
+.ArticleTest h1{
+  color: #495E57;
+}
+.forthSection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.Title{
+  width: 40%;
+  margin-left: 4rem;
+}
+.Title > h1{
+  font-family: 'Markazi Text', serif;
+  font-weight:500;
+  font-size: 64px;
+  color: var(--main-color-second);
+}
+.Title > h2{
+  color: var(--main-color-first);
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: -4rem;
+}
+.Title > p{
+  width: 50%;
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--main-color-first);
+  margin-top: -2rem;
+}
+
+.images > img{
+  width: 20rem;
+  margin-top: 5rem;
+  margin-right: 2rem;
+}
+
+
+/*.introduction{
+  display: flex;
   background-color: var(--main-color-first);
   justify-content: center;
+  align-items: flex-start;
+  height: 22rem;
 }
 .introduction h1{
   font-family: 'Markazi Text', serif;
   font-weight:500;
   font-size: 64px;
   color: var(--main-color-second);
-  grid-area: 1/1/2/2;
+  margin-top: -.5rem;
+  margin-right: 2rem;
 }
 .introduction img{
-  width: 25rem;
-  height: 20rem;
-  margin: 2rem;
-  grid-area: 1/2 / 3/2;
+  width: 20rem;
+  height: 18rem;
+  margin: 1.5rem;
 }
 .introduction h2{
   font-family: 'Markazi Text', serif;
   font-weight: 400;
   font-size: 40px;
   color: var(--secondary-color-third);
-  grid-area: 2/1;
+  margin-top: -2.5rem;
 }
 .introduction p{
   font-family: 'Markazi Text', serif;
   font-weight: 400;
   font-size: 18px;
   color: var(--secondary-color-third);
-  grid-area: 3/1;
+  width: 19rem;
+  flex-wrap: wrap;
+  margin-right: 10rem;
 }
 .introduction button{
   background-color: black;
   color: var(--secondary-color-third);
   font-family: 'Markazi Text', serif;
-  height: 50px;
-  width: 35%;
+  height: 3rem;
+  width: 8rem;
+  margin: 2rem;
   font-weight: 700;
-  font-size: 18px;
-  grid-area: 4/1;
 }
 button:hover{
   cursor: pointer;
 }
+.pre-Article{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.articleTitle{
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  font-size: 50px;
+  width: 45rem;
+}
 
+#buttonTitle{
+  background-color: var(--main-color-second);
+  color: black;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  height: 3rem;
+  width: 10rem;
+  border: none;
+}
+
+.flex_Article{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Article1{
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 0 4rem;
+  background-color: #EDEFEE;
+  width: 15%;
+  border-radius: 10% 10% 0 0;
+  align-items: center;
+  justify-content: space-between;
+  height: 30rem;
+}
+
+.Articles_text{
+  margin: 1.3rem;
+}
+
+.imageArticle img{
+width: 100%;
+border-radius: 10% 10% 0 0;
+border: .1rem solid;
+border-color: black;
+}
+.OrderArticle{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.OrderArticle img{
+  width: 50%;
+}
+.OrderArticle a{
+  text-decoration: none;
+  color: black;
+  align-items: flex-start;
+}
+
+.Title_and_Price h2, span{
+  width: 100%;
+  display: inline;
+}
+
+.Title_and_Price h2{
+  margin-right: 2rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+.Title_and_Price span{
+  color: var(--main-color-second);
+}
+
+.descriptionArticle p{
+  text-align: justify;
+}
+.test_flex{
+  display: inline-flex;
+  width: 100%;
+  margin: 1.2rem;
+  background-color: #F4CE14;
+  justify-content: center;
+}
+
+.user_test{
+  display: flex;
+  flex-wrap: wrap;
+  width: 33%;
+  background-color: #495E57;
+}
+
+.user_info{
+  display: inline-flex;
+}
+
+#image_test{
+  width: 60%;
+}
+
+*/
 
 .footer{
   display: flex;
   justify-content: space-between;
   background-color: #d9d9d9;
   margin-right: 1rem;
+  width: 100%;
 }
 
 .footer h2{
@@ -176,7 +507,48 @@ button:hover{
   display: flex;
 }
 .introduction{
-  
+  display: flex;
+  background-color: var(--main-color-first);
+  justify-content: center;
+  align-items: flex-start;
+  height: 20rem;
+  width: 30rem;
+}
+.introduction h1{
+  font-family: 'Markazi Text', serif;
+  font-weight:500;
+  font-size: 64px;
+  color: var(--main-color-second);
+  margin-top: -.5rem;
+}
+.introduction img{
+  width: 20rem;
+  height: 15rem;
+  margin: 1.5rem;
+}
+.introduction h2{
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--secondary-color-third);
+  margin-top: -2.5rem;
+}
+.introduction p{
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--secondary-color-third);
+  flex-wrap: wrap;
+
+}
+.introduction button{
+  background-color: black;
+  color: var(--secondary-color-third);
+  font-family: 'Markazi Text', serif;
+  height: 3rem;
+  width: 8rem;
+  margin: 2rem;
+  font-weight: 700;
 }
 
 .footer{
@@ -195,6 +567,90 @@ button:hover{
 
 .footer li{
   white-space: nowrap;
+}
+
+.firstSection{
+  width: 100%;
+}
+.firstDescription > h1{
+  width: 30%;
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.firstDescription >h2{
+  font-size: 2rem;
+  width: 30%;
+  margin-left: 1rem;
+}
+.imageFirst > img{
+  width: 10rem;
+  height: 12rem;
+}
+
+.firstDescription p{
+  width: 80%;
+  margin-left: 1rem;
+}
+.firstDescription > button{
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.pre-Article{
+  width: 100%;
+}
+
+.pre-Article h1{
+  margin-left: 1rem;
+}
+
+#buttonTitle{
+  margin-right: 1rem;
+}
+
+.secondSection{
+  flex-wrap: wrap;
+}
+.Special{
+  margin-right: 5rem;
+}
+.thirdSection ul > h1{
+  margin-left: -.5rem;
+}
+
+.ArticleTest{
+  width: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.forthSection{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.Title{
+  width: 80%;
+}
+.Title > h1{
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+.Title > h2{
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.Title > p{
+  width: 90%;
+  margin-left: 1rem;
+  text-align: justify;
+}
+
+.images > img{
+  width: 70%;
+  margin-left: 3rem;
+  margin-right: 1rem;
 }
 
 

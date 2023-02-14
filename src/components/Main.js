@@ -5,6 +5,7 @@ import LemonDessert from '../icons_assets/lemon dessert.jpg'
 import RobertImage from '../icons_assets/Robert.webp'
 import JohnImage from "../icons_assets/John.webp"
 import LoreImage from "../icons_assets/Lore.jpeg"
+import deliveryIcon from "../icons_assets/motorcycle.svg"
 
 
 export const Testimonials=[
@@ -32,37 +33,92 @@ function Main(){
     return(
         <main>
             <div className="introduction">
-                <h1> Little Lemon</h1>
-                <img src={restaurantFood} alt="restaurant food"/>
-                <h2>Chicago</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button>Reserve a Table</button>
+                <div className="itemsIntro">
+                    <h1> Little Lemon</h1>
+                    <h2>Chicago</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button>Reserve a Table</button>
+                </div>
+                <div className='imageIntro'>
+                    <img src={restaurantFood} alt="restaurant food"/>
+                </div>
             </div>
             <div className='pre-Article'>
-            <h1>This weeks specials!</h1>
-            <button>Online Menu</button>
+                <div className="articleTitle">
+                    <h1>This weeks specials!</h1>
+                </div>
+                <div className="articleButton">
+                    <button id='buttonTitle'>Online Menu</button>
+                </div>
             </div>
             <article>
-                <div className='Article1'>
-                    <img src={greekSalad} alt="greek salad"/>
-                    <h2>Greek salad</h2>
-                    <h3>$12.99</h3>
-                    <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
-                    <a href='/#'>Order a delivery</a>
-                </div>
-                <div className="Article2">
-                    <img src={bruchetta} alt="bruchetta"/>
-                    <h2>Bruchetta</h2>
-                    <h3>$5.99</h3>
-                    <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. </p>
-                    <a href='/#'>Order a delivery</a>
-                </div>
-                <div className='Article3'>
-                    <img src={LemonDessert} alt='Lemmon dessert '/>
-                    <h2>Lemmon Dessert</h2>
-                    <h3>$5.00</h3>
-                    <p>This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
-                    <a href='/#'>Order a delivery</a>
+                <div className="flex_Article">
+                    <div className='Article1'>
+                        <div className='imageArticle'>
+                            <img src={greekSalad} alt="greek salad"/>
+                        </div>
+                        <div className='Articles_text'>
+                            <div className='Title_and_Price'>
+                                <h2>Greek salad</h2>
+                                <span>$12.99</span>
+                            </div>
+                            <div className='descriptionArticle'>
+                                <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
+                            </div>
+                            <div className='OrderArticle'>
+                                <div className='Order'>
+                                    <a href='/#'>Order a delivery</a>
+                                </div>
+                                <div className='OrderIcon'>
+                                    <img src={deliveryIcon} alt='delivery'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="Article1">
+                        <div className='imageArticle'>
+                            <img src={bruchetta} alt="bruchetta"/>
+                        </div>
+                        <div className='Articles_text'>
+                            <div className='Title_and_Price'>
+                                <h2>Bruchetta</h2>
+                                <span>$5.99</span>
+                            </div>
+                            <div className='descriptionArticle'>
+                                <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. </p>
+                            </div>
+                            <div className='OrderArticle'>
+                                <div className='Order'>
+                                    <a href='/#'>Order a delivery</a>
+                                </div>
+                                <div className='OrderIcon'>
+                                    <img src={deliveryIcon} alt='deliver'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='Article1'>
+                        <div className='imageArticle'>
+                            <img src={LemonDessert} alt='Lemmon dessert '/>
+                        </div>
+                        <div className='Articles_text'>
+                            <div className='Title_and_Price'>
+                                <h2>Lemmon Dessert</h2>
+                                <span>$5.00</span>
+                            </div>
+                            <div className='descriptionArticle'>
+                                <p>This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
+                            </div>
+                            <div className='OrderArticle'>
+                                <div className='Order'>
+                                    <a href='/#'>Order a delivery</a>
+                                </div>
+                                <div className='OrderIcon'>
+                                    <img src={deliveryIcon} alt='deliver'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
 
@@ -72,12 +128,22 @@ function Main(){
                     <ul>
                         {Testimonials.map((item, index) => {
                             return (
-                                <li key={index}>
-                                    <h1>{item.Rating}</h1>
-                                    <img src={item.Picture} alt={item.Name}/>
-                                    <h2>{item.Name}</h2>
-                                    <p>{item.Review}</p>
-                                </li>
+                                <div className='test_flex'>
+                                    <li key={index}>
+                                        <div className='user_test'>
+                                            <h1>{item.Rating}</h1>
+                                            <div className='user_info'>
+                                                    <div className='user_picture'>
+                                                        <img id='image_test' src={item.Picture} alt={item.Name}/>
+                                                    </div>
+                                                    <div className='user_name'>
+                                                        <h2>{item.Name}</h2>
+                                                    </div>
+                                                </div>
+                                            <p>{item.Review}</p>
+                                        </div>
+                                    </li>
+                                </div>
                             );
                         })}
                     </ul>
