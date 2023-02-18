@@ -7,6 +7,8 @@ import JohnImage from "../icons_assets/John.webp"
 import LoreImage from "../icons_assets/Lore.jpeg"
 import Image1 from "../icons_assets/Mario and Adrian A.jpg"
 import Image2 from "../icons_assets/Mario and Adrian b.jpg"
+import { Routes } from 'react-router-dom'
+import BookingForm from './BookingForm'
 
 export const Testimonials=[
     {
@@ -29,7 +31,14 @@ export const Testimonials=[
     },
 ]
 
+
+
 function Main2(){
+    <Routes>
+            <Route path="/" element={Main2}></Route>
+            <Route path="/Greeting" element={section}></Route>
+            <Route path="./BookingPage" element={BookingForm}></Route>
+        </Routes>
     return(
         <main>
             <section className="firstSection">
@@ -133,3 +142,8 @@ function Main2(){
 }
 
 export default Main2;
+
+
+
+
+
