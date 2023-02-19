@@ -1,24 +1,18 @@
-import './App.css';
-import Header from './components/Header';
-import Main2 from './components/Main2';
-import Footer from './components/Footer';
-import { BrowserRouter as Router} from 'react-router-dom';
-import Navbar from './components/Navbar';
+import React from "react";
+import Home from "./routes/Home";
+import Reservations from "./routes/Reservations";
 
-
+import {Route, Routes} from "react-router-dom";
 
 function App() {
   return (
-    <div className='App'>
-      <Router >
-        <Header/>
-        <Navbar/>
-        <Main2/>
-        <Footer/>
-      </Router>
-    </div>
-
+    <>
+      <Routes>
+        <Route path = "/" element = {<Home />}/>
+        <Route path = "/reservations" element = {<Reservations />}/>
+      </Routes>
+    </>
   );
-};
+}
 
 export default App;

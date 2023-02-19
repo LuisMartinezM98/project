@@ -1,15 +1,15 @@
 import React from 'react';
-import "./styles/ReservationsContent.css";
+import "./styles/BookingContent.css";
 import {useForm} from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup";
 
 const schema = yup.object({
-    name: yup.string().required("Full name is a required"),
-    email: yup.string().required("Email is a required").email("Email is not valid"),
-    telephone: yup.string().required("Telephone is required.").matches(/^(\+\d{2,3}\s)?\(?\d{3}\)?[\s.-]\d{2}[\s.-]\d{3}[\s.-]\d{4}$/, "Phone number must match the form 643 323 1231"),
-    guests: yup.number().min(1, "There must be at least 1 guest.").required("Please specify number of guest for this reservation."),
-    date: yup.string().required("Please chose your date time."),
+    name: yup.string().required("Full name is a required field!"),
+    email: yup.string().required("Email is a required field!").email("Email is not valid!"),
+    telephone: yup.string().required("Telephone is a required field!").matches(/^(\+\d{2,3}\s)?\(?\d{3}\)?[\s.-]\d{2}[\s.-]\d{3}[\s.-]\d{4}$/, "Phone number must match the form 233 00 000 0000"),
+    guests: yup.number().min(1, "There must be at least 1 guest!").required("Please specify number of guests per table!"),
+    date: yup.string().required("Please select date and time!"),
 })
 
 function Form() {
@@ -43,6 +43,7 @@ function Form() {
                     <input type="tel" placeholder="233 00 000 0000" name="telephone" {...register("telephone")}/>
                     <span className="error-message">{errors.telephone?.message}</span>
                 </div>
+
                 <div className="field occasion">
                     <label htmlFor="occasion">Occasion (optional)</label>
                     <div className="options">
@@ -69,4 +70,4 @@ function Form() {
   )
 }
 
-export default Form;
+export default Form

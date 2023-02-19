@@ -1,13 +1,37 @@
+import React, { useState} from 'react';
+import "../components/styles/Header.css"
+import Logo from "../components/assets/logo.jpg"
+import { NavLink } from 'react-router-dom';
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
-function Header() {
-    return(
-        <header>
-            <meta name="description" content="Gourmet Restaurant. Open Monday to Friday, 9 to 5, in the Central Park area"/>
-            <meta name="og:title" content="Little Lemon Restaurant application"/>
-            <meta name="og:description" content="You can Order delivery food or reserve a table on this app"/>
-            <meta name="og:image" content="https://example.com/little-lemon-restaurant.jpg"/>
-        </header>
-    );
-};
 
-export default Header;
+const Header = () => {
+
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+
+  return (
+    <>
+      <header className="header-container">
+        <NavLink to = "/">
+            {<img className="logo-img" src = { Logo } alt = "Little Lemon logo" />}
+        </NavLink>
+        <nav>
+            <ul className={click ? "nav-menu active" : "nav-menu"}>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="#">About</NavLink></li>
+                <li><NavLink to="#">Menu</NavLink></li>
+                <li><NavLink to="/reservations">Booking Table</NavLink></li>
+                <li><NavLink to="#">Order Online</NavLink></li>
+                <li><NavLink to="#">Login</NavLink></li>
+            </ul>
+        </nav>
+        <div className="hamburger" onClick = {handleClick}>
+            {click ? (<AiOutlineClose size={20} style={{ color: "#333333"}}/>) : (<AiOutlineMenu size={30} style={{ color: "#333333", borderLeft: "1px solid #333333", paddingLeft: "10px", height: "20px"}}/>)}  
+        </div>
+      </header>
+    </>
+  )
+}
+
+export default Header
