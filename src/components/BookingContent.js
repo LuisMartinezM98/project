@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import "./styles/BookingContent.css";
+import { submitAPI } from './Api';
 
 function BookingContent() {
 
@@ -35,7 +36,6 @@ function BookingContent() {
             }
         }
 
-
         if (formData.telephone === "") {
             err.telephone = "* Phone number required!" 
         }else{
@@ -66,6 +66,16 @@ function BookingContent() {
             alert("Submitted")
         }
     }
+    const fetchData = () => {
+        fetch('https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js')
+        .then(response => response.json())
+        .then((jsonData) => setData(json.master.fetchAPI))
+        .catch((error) => console.log(error));
+      }
+    
+      useEffect (() => {
+        fetchData();
+      }, []);
 
   return (
     <div className="res-content-wrapper">
